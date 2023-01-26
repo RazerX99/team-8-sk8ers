@@ -1,16 +1,27 @@
 package com.levelup.forestsandmonsters;
+import com.levelup.forestsandmonsters.GameController.DIRECTION;
 
 //import com.levelup.forestsandmonsters.cli.GameMap;
 public class Character {
-    public String DEFAULT_NAME;
+    public static String DEFAULT_NAME;
     public String name;
-    static enum DIRECTION{NORTH,SOUTH,EAST,WEST};
-
+    public GameController DIRECTION;
+    public GameMap map; 
+    public Position currentPosition;
+    public int moveCount;
 
     public Character() {}
 
     public Character(String name) {
         this.name=name;
+    }
+
+    public void setMoveCount(int m){
+        this.moveCount=m;
+    }
+
+    public int getMoveCount(){
+        return this.moveCount;
     }
 
     public String getName() {
@@ -24,4 +35,13 @@ public class Character {
     }
 
     public void move(DIRECTION direction){}
+
+//    public GameMap getMap(){
+//         return ma
+//     }
+
+//     public void setMap(GameMap map){
+//         this.map=map;
+//     }
+
 }

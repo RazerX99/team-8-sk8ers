@@ -6,5 +6,8 @@ public class Position {
 
     public Point coordinates;
 
-        public Position(int xCoordinates, int yCoordinates) {}
+    public Position(int xCoordinates, int yCoordinates) {
+        this.coordinates.x = xCoordinates;
+        this.coordinates.y=yCoordinates;
+    }
 }

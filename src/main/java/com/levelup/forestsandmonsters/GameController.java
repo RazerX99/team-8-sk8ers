@@ -8,6 +8,8 @@ public class GameController {
     static final String DEFAULT_CHARACTER_NAME = "Character";
     private GameMap gameMap;
     private Character character;
+    public static enum DIRECTION{NORTH, SOUTH, EAST, WEST};
+
 
     public class GameStatus {
         // TODO: Add other status data
@@ -19,7 +21,7 @@ public class GameController {
     public String characterName= DEFAULT_CHARACTER_NAME;
     public Point currentPosition = null;
 
-    public GameController() {
+    public  GameController() {
         status = new GameStatus();
     }
 
@@ -28,9 +30,8 @@ public class GameController {
     }
 
     // TODO: Ensure this AND CLI commands match domain model
-    public static enum DIRECTION {
-        NORTH, SOUTH, EAST, WEST
-    }
+    //public static enum DIRECTION {NORTH, SOUTH, EAST, WEST}
+    
 
     // Pre-implemented to demonstrate ATDD
     // TODO: Update this if it does not match your design

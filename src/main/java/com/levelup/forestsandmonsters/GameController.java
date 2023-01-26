@@ -35,19 +35,18 @@ public class GameController {
     // Pre-implemented to demonstrate ATDD
     // TODO: Update this if it does not match your design
     public void createCharacter(String name) {
-        if (name != null && !name.equals("")) {
+        if (name != null && !name.equals(""))
             status.characterName = name;
-        } else {
-            status.characterName = DEFAULT_CHARACTER_NAME;
-        }
+
+        character = new Character(status.characterName);
     }
 
     public void startGame() {
         this.gameMap = new GameMap();
-        this.character = new Character();
-
-        //TODO: put the character - initialize
-        //TODO: Should also update the game results?
+        if (character == null)
+        {
+            createCharacter(DEFAULT_CHARACTER_NAME);
+        }
     }
 
     public GameStatus getStatus() {

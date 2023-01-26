@@ -1,5 +1,4 @@
-package com.levelup;
-import com.levelup.forestsandmonsters.Position;
+package com.levelup.forestsandmonsters;
 
 //import com.levelup.forestsandmonsters.cli.GameMap;
 public class Character {

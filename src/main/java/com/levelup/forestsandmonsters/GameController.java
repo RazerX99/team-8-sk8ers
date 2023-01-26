@@ -41,9 +41,9 @@ public class GameController {
     }
 
     public void startGame() {
-        // TODO: Implement startGame - Should probably create tiles and put the character
-        // on them?
-        // TODO: Should also update the game results?
+        //TODO: create the map
+        //TODO: put the character
+        //TODO: Should also update the game results?
     }
 
     public GameStatus getStatus() {

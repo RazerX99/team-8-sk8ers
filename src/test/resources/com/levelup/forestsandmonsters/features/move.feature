@@ -11,6 +11,6 @@ I want to move my character. If they attempt to move past a boundary, the move r
         And YCoordinates <endPositionY>
         Examples:
         |startingPositionX|startingPositionY|direction|endPositionX|endPositionY|
-        |0|0|North|0|1|
+        |0|0|NORTH|0|1|
 
     

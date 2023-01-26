@@ -20,7 +20,7 @@ public class GameController {
         status = new GameStatus();
     }
 
-    public void serCharacterPosition(Point coordinates){
+    public void setCharacterPosition(Point coordinates){
         //TODO: Implement this to set characters current positions
     }
 

@@ -1,6 +1,7 @@
 package com.levelup;
 
 import java.awt.Point;
+import com.levelup.forestsandmonsters.Position;
 
 public class GameMap {
 

@@ -10,7 +10,7 @@ I want to move my character. If they attempt to move past a boundary, the move r
         Then the character is now at position with XCoordinates <endPositionX>
         And YCoordinates <endPositionY>
         Examples:
-        |startingPositionX|startingPositionY|direction|endPositionX|endPositionY|
-        |0|0|NORTH|0|1|
+        | startingPositionX | startingPositionY | direction | endPositionX | endPositionY |
+        | 0 | 0 | NORTH | 0 | 1 |
 
     

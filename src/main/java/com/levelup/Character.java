@@ -1,4 +1,4 @@
-package com.levelup.forestsandmonsters.cli;
+package com.levelup;
 
 //import com.levelup.forestsandmonsters.cli.GameMap;
 public class Character {

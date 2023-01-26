@@ -2,7 +2,7 @@ package com.levelup.forestsandmonsters.cli;
 
 import java.awt.Point;
 
-public class Gamemap {
+public class GameMap {
 
         public Position positions;
         public Position startingPosition;

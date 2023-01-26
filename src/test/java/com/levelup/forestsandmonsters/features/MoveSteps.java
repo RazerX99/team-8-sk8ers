@@ -41,7 +41,7 @@ public class MoveSteps {
             this.currentPosition = status.currentPosition;
         }
 
-    @Then("the character is n ow at position with XCoordinates {int}")
+    @Then("the character is now at position with XCoordinates {int}")
         public void checkXCoordinates(int endX) {
             assertNotNull("Expected position not null", this.currentPosition);
             assertEquals(endX, this.currentPosition.x);

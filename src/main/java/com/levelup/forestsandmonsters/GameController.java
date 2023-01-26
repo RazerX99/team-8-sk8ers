@@ -13,9 +13,15 @@ public class GameController {
     }
 
     GameStatus status;
+    public String characterName= DEFAULT_CHARACTER_NAME;
+    public Point currentPosition = null;
 
     public GameController() {
         status = new GameStatus();
+    }
+
+    public void serCharacterPosition(Point coordinates){
+        //TODO: Implement this to set characters current positions
     }
 
     // TODO: Ensure this AND CLI commands match domain model

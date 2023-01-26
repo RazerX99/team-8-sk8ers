@@ -4,9 +4,8 @@ I want to start the game
 
     Scenario Outline: Start the game
         When the user starts the game
-        Then the character is now at position with XCoordinates <endPositionX>
+        Then the map is initialized with number of positions <numOfPositions>
+        And the character is at the starting position <startPosition>
         Examples:
-        |startingPositionX|startingPositionY|direction|endPositionX|endPositionY|
-        |0|0|NORTH|0|1|
-
-    
+        |numOfPositions|startPosition|
+        |100|1,1|

@@ -6,6 +6,8 @@ public class GameController {
     // TODO: If your stakeholder wants to call this CHARACTER, change var name for
     // low representational gap
     static final String DEFAULT_CHARACTER_NAME = "Character";
+    private GameMap gameMap;
+    private Character character;
 
     public class GameStatus {
         // TODO: Add other status data
@@ -41,8 +43,10 @@ public class GameController {
     }
 
     public void startGame() {
-        //TODO: create the map
-        //TODO: put the character
+        this.gameMap = new GameMap();
+        this.character = new Character();
+
+        //TODO: put the character - initialize
         //TODO: Should also update the game results?
     }
 
@@ -55,4 +59,9 @@ public class GameController {
         // TODO: Should probably also update the game results
     }
 
+    public int getTotalPositions()
+    {
+        //TODO: return a real value, just a placeholder
+        return 0;
+    }
 }

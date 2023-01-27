@@ -10,10 +10,14 @@ public class Character {
     public Position currentPosition;
     public int moveCount;
 
-    public Character() {}
+    public Character() {
+    
+    }
 
     public Character(String name) {
         this.name=name;
+        this.map = new GameMap();
+        this.currentPosition = new Position(1,1);
     }
 
     public void setMoveCount(int m){

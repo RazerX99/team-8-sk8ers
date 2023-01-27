@@ -10,6 +10,8 @@ public class Position {
         this.coordinates = new Point(xCoordinates, yCoordinates);
     }
 
+    public Position()
+    {}
     //Overload constructor to assist in quick copy of a Position object.
     public Position(Point coordinates) {
         this.coordinates = new Point(coordinates.x, coordinates.y);

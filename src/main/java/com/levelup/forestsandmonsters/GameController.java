@@ -6,7 +6,7 @@ public class GameController {
     // TODO: If your stakeholder wants to call this CHARACTER, change var name for
     // low representational gap
     static final String DEFAULT_CHARACTER_NAME = "Character";
-    private GameMap gameMap;
+    private GameMap gameMap = new GameMap();
     private Character character;
     public static enum DIRECTION{NORTH, SOUTH, EAST, WEST};
 
@@ -15,16 +15,20 @@ public class GameController {
         // TODO: Add other status data
         public String characterName = DEFAULT_CHARACTER_NAME;
         public Point currentPosition = null;
+
+        public GameStatus(){
+       }
     }
 
-    GameStatus status;
+    GameStatus status=new GameStatus();
     public String characterName= DEFAULT_CHARACTER_NAME;
     public Point currentPosition = null;
 
     public  GameController() {
         status = new GameStatus();
-        status.characterName=character.getName();
-        status.currentPosition=gameMap.minPosition.coordinates;
+        this.currentPosition=gameMap.minPosition.coordinates;
+        createCharacter(DEFAULT_CHARACTER_NAME);
+        
     }
 
     public void setCharacterPosition(Point coordinates){
@@ -48,11 +52,13 @@ public class GameController {
     }
 
     public void startGame() {
-        this.gameMap = new GameMap();
+         this.gameMap = new GameMap();
         if (character == null)
         {
             createCharacter(DEFAULT_CHARACTER_NAME);
         }
+        //status.characterName=this.characterName;
+        this.currentPosition=gameMap.minPosition.coordinates;
     }
 
     public GameStatus getStatus() {

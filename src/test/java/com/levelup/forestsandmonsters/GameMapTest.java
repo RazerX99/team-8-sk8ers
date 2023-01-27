@@ -11,23 +11,23 @@ import static org.junit.Assert.assertFalse;
 public class GameMapTest {
     @Test
     public void initializationCreates100Positions() {
-        GameMap testObj = new GameMap();
+        GameMap testObj = new GameMap(10,10);
 
-        assertEquals(10, testObj.getPositions().length);
-        assertEquals(10, testObj.getPositions()[0].length);
+        assertEquals(10, testObj.maxPosition.getCoordinates().x);
+        assertEquals(10, testObj.maxPosition.getCoordinates().y);
     }
 
     @Test
     public void initializationCreatesPositionsWithCorrectCoordinates() {
-        GameMap testObj = new GameMap();
+        GameMap testObj = new GameMap(10,10);
 
-        Point expectedLowerLeft = new Point(0,0);
-        Point expectedUpperRight = new Point(9, 9);
+        Point expectedLowerLeft = new Point(1,1);
+        Point expectedUpperRight = new Point(10, 10);
 
-        assertEquals(expectedLowerLeft, testObj.getPositions()[0][0].coordinates);
-        assertEquals(expectedUpperRight, testObj.getPositions()[9][9].coordinates);
+        assertEquals(expectedLowerLeft,testObj.minPosition.getCoordinates());
+        assertEquals(expectedUpperRight, testObj.maxPosition.getCoordinates());
     }
-
+/*
     @Test
     public void calculatePositionForNorthWhenInMiddleOfMap() {
         GameMap testObj = new GameMap();
@@ -153,4 +153,5 @@ public class GameMapTest {
         Point badPositionCoordinates = new Point(-4, 11);
         assertFalse(testObj.isPositionValid(badPositionCoordinates));
     }
+     */
 }

@@ -1,24 +1,30 @@
 package com.levelup.forestsandmonsters;
 
-import java.awt.Point;
-
 import com.levelup.forestsandmonsters.GameController.*;
 
 public class GameMap {
 
-    public Position[][] positions;
-    public Position[][] startingPosition;
     public int numPositions;
     public String directionProvided;
-    public Position[][] STUBBED_NEW_POSITION;
+    public Position minPosition;
+    public Position maxPosition;
+    
+    public GameMap() {
 
-    public Position[][] getPositions() {
-        return startingPosition;
+        minPosition = new Position(1,1);
+        maxPosition = new Position(10,10); 
+    }
+
+    //Overloaded constructor to make the map larger, pass the max x, y coordinates
+    public GameMap(int xCoordinates, int yCoordinates) {
+        
+        minPosition = new Position(1,1);
+        maxPosition = new Position(xCoordinates,yCoordinates); 
     }
 
     public Position calculatePosition(Position startingPosition, DIRECTION direction) {
 
-        //Create a copy of the startingPosition
+        // Create a copy of the startingPosition
         Position newPosition = startingPosition.clonePosition();
 
         if (direction == DIRECTION.NORTH) {
@@ -30,15 +36,26 @@ public class GameMap {
         } else {
             newPosition.coordinates.x--;
         }
-        return newPosition;
+
+        if (isPositionValid(newPosition))
+            return newPosition;
+
+        return startingPosition;
     }
 
-    public boolean isPositionValid(Point positionCoordinates) {
+    public boolean isPositionValid(Position position) {
+
+        if (position.getCoordinates().x < 1 || position.getCoordinates().x > 10 || position.getCoordinates().y < 1
+                || position.getCoordinates().y > 10)
+            return false;
+
         return true;
     }
 
     public int getTotalPositions() {
         return 1;
     }
+
+
 
 }

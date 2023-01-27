@@ -2,6 +2,7 @@ package com.levelup.forestsandmonsters;
 import com.levelup.forestsandmonsters.GameController.DIRECTION;
 
 //import com.levelup.forestsandmonsters.cli.GameMap;
+
 public class Character {
     public static String DEFAULT_NAME;
     public String name;

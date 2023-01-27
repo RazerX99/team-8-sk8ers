@@ -23,15 +23,20 @@ public class GameController {
 
     public  GameController() {
         status = new GameStatus();
+        status.characterName=character.getName();
+        status.currentPosition=gameMap.minPosition.coordinates;
     }
 
     public void setCharacterPosition(Point coordinates){
         //TODO: Implement this to set characters current positions
+        this.currentPosition.x = coordinates.x;
+        this.currentPosition.y = coordinates.y;
     }
 
     // TODO: Ensure this AND CLI commands match domain model
     //public static enum DIRECTION {NORTH, SOUTH, EAST, WEST}
     
+
 
     // Pre-implemented to demonstrate ATDD
     // TODO: Update this if it does not match your design
@@ -57,11 +62,12 @@ public class GameController {
     public void move(DIRECTION directionToMove) {
         // TODO: Implement move - should call something on another class
         // TODO: Should probably also update the game results
+        character.move(directionToMove);
     }
 
     public int getTotalPositions()
     {
         //TODO: return a real value, just a placeholder
-        return 0;
+        return gameMap.numPositions;
     }
 }

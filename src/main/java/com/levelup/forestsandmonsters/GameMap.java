@@ -20,7 +20,7 @@ public class GameMap {
         
         minPosition = new Position(1,1);
         maxPosition = new Position(xCoordinates,yCoordinates); 
-    }
+}
 
     public Position calculatePosition(Position startingPosition, DIRECTION direction) {
 

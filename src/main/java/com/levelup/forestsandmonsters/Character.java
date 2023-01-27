@@ -1,7 +1,6 @@
 package com.levelup.forestsandmonsters;
 import com.levelup.forestsandmonsters.GameController.DIRECTION;
 
-//import com.levelup.forestsandmonsters.cli.GameMap;
 
 public class Character {
     public static String DEFAULT_NAME;
@@ -29,13 +28,18 @@ public class Character {
         return this.name;
     }
 
-    public void enterMap(GameMap map) {}
+    public void enterMap(GameMap map) {
+      this.map=map;
 
-    public Position getPosition() {
-        return new Position(0, 0);
     }
 
-    public void move(DIRECTION direction){}
+    public Position getPosition() {
+        return this.currentPosition;
+    }
+
+    public void move(DIRECTION direction){
+        map.calculatePosition(this.currentPosition, direction);
+    }
 
 //    public GameMap getMap(){
 //         return ma

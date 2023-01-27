@@ -13,9 +13,10 @@ public class GameMapTest {
     public void initializationCreates100Positions() {
         GameMap testObj = new GameMap(10,10);
 
+
         assertEquals(10, testObj.maxPosition.getCoordinates().x);
         assertEquals(10, testObj.maxPosition.getCoordinates().y);
-    }
+  }
 
     @Test
     public void initializationCreatesPositionsWithCorrectCoordinates() {
@@ -26,13 +27,13 @@ public class GameMapTest {
 
         assertEquals(expectedLowerLeft,testObj.minPosition.getCoordinates());
         assertEquals(expectedUpperRight, testObj.maxPosition.getCoordinates());
-    }
+ }
 /*
     @Test
     public void calculatePositionForNorthWhenInMiddleOfMap() {
         GameMap testObj = new GameMap();
 
-        Position startingPosition = testObj.getPositions()[1][2];
+        Position startingPosition = testObj.getPositions();
         Point expectedEndPositionCoordinates = new Point(1,3);
         GameController.DIRECTION direction = GameController.DIRECTION.NORTH;
 
@@ -45,7 +46,7 @@ public class GameMapTest {
     public void calculatePositionForSouthWhenInMiddleOfMap() {
         GameMap testObj = new GameMap();
 
-        Position startingPosition = testObj.getPositions()[1][2];
+        Position startingPosition = testObj.getPositions();
         Point expectedEndPositionCoordinates = new Point(1, 1);
         GameController.DIRECTION direction = GameController.DIRECTION.SOUTH;
 
@@ -58,7 +59,7 @@ public class GameMapTest {
     public void calculatePositionForWestWhenInMiddleOfMap() {
         GameMap testObj = new GameMap();
 
-        Position startingPosition = testObj.getPositions()[1][2];
+        Position startingPosition = testObj.getPositions();
         Point expectedEndPositionCoordinates = new Point(0, 2);
         GameController.DIRECTION direction = GameController.DIRECTION.WEST;
 
@@ -71,7 +72,7 @@ public class GameMapTest {
     public void calculatePositionForEastWhenInMiddleOfMap() {
         GameMap testObj = new GameMap();
 
-        Position startingPosition = testObj.getPositions()[1][2];
+        Position startingPosition = testObj.getPositions();
         Point expectedEndPositionCoordinates = new Point(2, 2);
         GameController.DIRECTION direction = GameController.DIRECTION.EAST;
 
@@ -84,7 +85,7 @@ public class GameMapTest {
     public void calculatePositionForNorthWhenOnBoundary() {
         GameMap testObj = new GameMap();
 
-        Position startingPosition = testObj.getPositions()[2][9];
+        Position startingPosition = testObj.getPositions();
         Point expectedEndPositionCoordinates = new Point(2, 9);
         GameController.DIRECTION direction = GameController.DIRECTION.NORTH;
 
@@ -97,7 +98,7 @@ public class GameMapTest {
     public void calculatePositionForSouthWhenOnBoundary() {
         GameMap testObj = new GameMap();
 
-        Position startingPosition = testObj.getPositions()[2][0];
+        Position startingPosition = testObj.getPositions();
         Point expectedEndPositionCoordinates = new Point(2, 0);
         GameController.DIRECTION direction = GameController.DIRECTION.SOUTH;
 
@@ -110,7 +111,7 @@ public class GameMapTest {
     public void calculatePositionForWestWhenOnBoundary() {
         GameMap testObj = new GameMap();
 
-        Position startingPosition = testObj.getPositions()[0][5];
+        Position startingPosition = testObj.getPositions();
         Point expectedEndPositionCoordinates = new Point(0, 5);
         GameController.DIRECTION direction = GameController.DIRECTION.WEST;
 
@@ -123,7 +124,7 @@ public class GameMapTest {
     public void calculatePositionForEastWhenOnBoundary() {
         GameMap testObj = new GameMap();
 
-        Position startingPosition = testObj.getPositions()[9][3];
+        Position startingPosition = testObj.getPositions();
         Point expectedEndPositionCoordinates = new Point(9, 3);
         GameController.DIRECTION direction = GameController.DIRECTION.EAST;
 

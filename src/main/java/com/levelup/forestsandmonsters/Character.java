@@ -42,7 +42,7 @@ public class Character {
     }
 
     public void move(DIRECTION direction){
-        map.calculatePosition(this.currentPosition, direction);
+        this.currentPosition = map.calculatePosition(this.currentPosition, direction);
     }
 
 //    public GameMap getMap(){

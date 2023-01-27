@@ -69,6 +69,9 @@ public class GameController {
         // TODO: Implement move - should call something on another class
         // TODO: Should probably also update the game results
         character.move(directionToMove);
+        this.status.currentPosition = character.currentPosition.getCoordinates();
+
+
     }
 
     public int getTotalPositions()

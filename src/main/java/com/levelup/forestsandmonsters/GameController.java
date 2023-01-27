@@ -33,8 +33,9 @@ public class GameController {
 
     public void setCharacterPosition(Point coordinates){
         //TODO: Implement this to set characters current positions
-        this.currentPosition.x = coordinates.x;
-        this.currentPosition.y = coordinates.y;
+        this.character.currentPosition = new Position(coordinates);
+        //this.currentPosition.x = coordinates.x;
+        //this.currentPosition.y = coordinates.y;
     }
 
     // TODO: Ensure this AND CLI commands match domain model
